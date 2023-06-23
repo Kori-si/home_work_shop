@@ -1,0 +1,132 @@
+.offer {
+  display: grid;
+  background: #ffffff;
+  padding-top: 65px;
+  grid-template-columns: repeat(3, 360px);
+  gap: 30px;
+}
+
+.offer__item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 1;
+}
+
+.big {
+  grid-column: span 3;
+}
+
+.offer__img {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.offer__img img {
+  opacity: 0.5;
+  width: inherit;
+  height: inherit;
+}
+
+.offer__text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /* height: inherit; */
+  text-decoration: none;
+}
+
+.title__first {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title__for {
+  padding-top: 5px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #f16d7f;
+}
+
+.offer__text:hover {
+  border: 2px solid #f26376;
+  background-color: #272727;
+  transition: all 0.3s;
+  padding: 10px 20px;
+}
+
+.offer__text:hover .title__first {
+  color: #f16d7f;
+  transition: all 0.3s;
+}
+
+.offer__text:hover .title__for {
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .offer {
+    padding: 0 2%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .offer__item {
+    height: 100%;
+  }
+
+  .offer__img {
+    width: 100%;
+    height: inherit;
+  }
+
+  .offer__img img {
+    width: inherit;
+    height: inherit;
+  }
+
+  .big {
+    max-height: 116px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .offer {
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .offer__item {
+    height: 100%;
+  }
+
+  .offer__img {
+    width: 100%;
+    height: inherit;
+  }
+
+  .offer__img img {
+    width: inherit;
+    height: inherit;
+  }
+
+  .big {
+    height: 111px;
+  }
+}
