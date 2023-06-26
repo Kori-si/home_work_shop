@@ -1,0 +1,35 @@
+@import "header";
+@import "navigation";
+@import "top";
+@import "offer";
+@import "product_item";
+@import "filter";
+@import "page";
+@import "footer";
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+

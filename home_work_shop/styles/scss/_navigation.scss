@@ -1,0 +1,31 @@
+@import "vars";
+
+.navigation {
+    background-color: $color_pink_back_navigation;
+    display: flex;
+    height: 148px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__title {
+    color: $color_pink_basic;
+    font-size: 24px;
+}
+
+.navigation__list {
+    color: $color_grey;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.navigation__link{
+    color: $color_grey;
+
+}
+
+.navigation__link:last-child{
+    color: $color_pink_basic;
+    font-size: 14px;
+    font-weight: bold;
+}

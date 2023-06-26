@@ -1,0 +1,74 @@
+@import "vars";
+
+.top__content {
+  display: flex;
+  background-color: $color_back_top_pink;
+  align-items: center;
+  gap: 252px;
+}
+
+.top__title {
+  border-width: 0 0 0 12px;
+  border-style: none none none solid;
+  border-color: $color_pink_basic;
+  padding-left: 16px;
+}
+
+.top__subject {
+  @include font(700, 48px, 58px); 
+  font-style: normal;
+  color: $color_black;
+}
+
+.top__subtitle {
+  @include font(700, 32px, 58px);
+  font-style: normal;
+  color: $color_black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .top__content {
+    display: flex;
+    justify-content: center;
+    gap: 7.8rem;
+    margin-bottom: 65px;
+  }
+
+  .img__top {
+    width: 11.4rem;
+  }
+
+  .top__subject {
+    @include font(900, 2.8rem, 3.3rem);
+  }
+
+  .top__subtitle {
+    font-size: 1.75rem;
+    line-height: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .top__content {
+    margin-bottom: 64px;
+    padding: 150px 0;
+    @include flex(column, center, center);
+  }
+
+  .top__subject {
+    font-size: 42px;
+  }
+  
+  .top__subtitle {
+    font-size: 22px;
+  }
+
+  .top__subject,
+  .top__subtitle {
+    line-height: 40px;
+  }
+
+  .top__img {
+    display: none;
+  }
+}

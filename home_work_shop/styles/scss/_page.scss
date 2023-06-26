@@ -1,0 +1,25 @@
+@import "vars";
+
+.page {
+    @include flex(row, center, center);
+}
+
+.page__number {
+    @include flex(row, center, center);
+    padding: 15px;
+    gap: 18px;
+    margin-top: 49px;
+    margin-bottom: 97px;
+    color: $color_grey_bolder;
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid $color_grey_bolder;
+    border-radius: 3px;
+}
+
+
+
+.page__text:nth-child(2){
+    color: $color_pink_basic;
+    font-weight: 400;
+}
