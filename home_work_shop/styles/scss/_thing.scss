@@ -1,0 +1,36 @@
+@import "vars";
+@import "mixin";
+
+.thing {
+    background: #f7f7f7;
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    display: grid;
+    /* grid-template-columns: 250px 1fr; */
+    grid-template-rows: 1fr 1fr;
+    /* grid-area: span 1; */
+    grid-column: span 1;
+    grid-row: span 2 / 3;
+    /* grid-row-end: 2; */
+    height: 100%;
+
+    padding: 50px 0;
+    &__button {
+        @include flex(row, center, space-between);
+
+        &__item {
+            @include flex(row, center, center);
+            background: $color_grey_bolder_1;
+            border: none;
+            border-radius: 1px;
+            width: 47px;
+            height: 47px;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+    }
+}

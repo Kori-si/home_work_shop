@@ -1,6 +1,5 @@
 @import "vars";
 
-
 .products__text {
   padding-top: 96px;
   text-align: center;
@@ -42,7 +41,7 @@
 }
 
 .img__item__black {
-  @include flex (column, center, center);
+  @include flex(column, center, center);
   display: none;
   z-index: 10;
   position: absolute;
@@ -54,7 +53,6 @@
 }
 
 .button__item__black {
-  @include flex (row, center, center);
   position: absolute;
   gap: 11px;
   background-color: transparent;
@@ -63,51 +61,55 @@
   font-size: 14px;
   text-align: center;
   padding: 9px 16px;
+
+  &:hover {
+    border: $color_black_offer;
+    color: $color_black_offer;
+    background-color: $color_back_white;
+
+    & path {
+      fill: $color_black_offer;
+    }
+  }
+
+  &:active {
+    border: $color_back_white;
+    color: $color_back_white;
+    background-color: $color_pink_basic;
+
+    & path {
+      fill: $color_back_white;
+    }
+  }
+
+  &:hover,
+  &:active {
+    transition: all 0.6s;
+
+    & path {
+      transition: all 0.6s;
+    }
+  }
 }
 
 .products__items:hover .img__item__black,
 .button__item__black {
-  @include flex (row, center, center);
-  transition: all 0.3s;
-}
-
-.button__item__black:hover {
-  display: flex;
-  border: $color_black_offer;
-  color: $color_black_offer;
-  background-color: $color_back_white;
-  transition: all 0.3s;
-}
-.button__item__black:hover path {
-  fill: $color_black_offer;
-  transition: all 0.3s;
-}
-
-.button__item__black:active {
-  border: $color_back_white;
-  color: $color_back_white;
-  background-color: $color_pink_basic;
-  transition: all 0.3s;
-}
-.button__item__black:active path {
-  fill: $color_back_white;
+  @include flex(row, center, center);
   transition: all 0.3s;
 }
 
 .product__name,
 .product__description {
   padding: 25px 29px 0 18px;
-
 }
 
 .name__title {
- @include font(400, 14px, 16px); 
+  @include font(400, 14px, 16px);
   font-style: normal;
 }
 
-
 .description__text {
-  @include font(300, 13px, 17px); 
+  @include font(300, 13px, 17px);
   font-style: normal;
   color: $color_grey_descriplion;
 }
@@ -117,7 +119,7 @@
 }
 
 .price {
-  @include font(400, 16px, 19px); 
+  @include font(400, 16px, 19px);
   font-style: normal;
   color: $color_pink_basic;
 }
@@ -137,7 +139,7 @@
 .products__button {
   display: flex;
   justify-content: center;
-  padding: 49px 0 61px 0;   
+  padding: 49px 0 61px 0;
 }
 
 .button__all {
@@ -145,19 +147,19 @@
   border: 2px solid $color_pink_basic;
   padding: 15px 39px 14px;
 
-  & a{
-    @include font(400, 16px, 19px); 
+  & a {
+    @include font(400, 16px, 19px);
     font-style: normal;
     color: $color_pink_basic;
   }
-  
+
   &:hover {
-    border: 2px solid $color_back_white;
+    border: 2px solid $color_pink_basic;
     background: $color_pink_basic;
     color: $color_back_white;
     transition: all 0.3s;
-  
-    & a{
+
+    & a {
       color: $color_back_white;
       transition: all 0.3s;
     }
@@ -167,6 +169,11 @@
     background: $color_grey_descriplion;
     color: $color_back_white;
     transition: all 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    transition: all 0.6s;
   }
 }
 
@@ -187,8 +194,7 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__content {
     gap: 16px;
-    @include flex (column, center, center);
-
+    @include flex(column, center, center);
   }
 
   .products__items {
@@ -201,7 +207,7 @@
 
   .products__items:focus .img__item__black,
   .button__item__black {
-    @include flex (row, center, center);
+    @include flex(row, center, center);
     transition: all 0.3s;
   }
 

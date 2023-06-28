@@ -1,38 +1,38 @@
-@mixin flex ($direction, $align, $justify) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: $align;
-    justify-content: $justify;
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid() {
+  display: grid;
+}
+
+@mixin font($weight, $size, $lineHeight) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+@mixin square($radius) {
+  @if $radius != 0 {
+    border-radius: $radius;
   }
-  
-  @mixin grid () {
-    display: grid;
-  }
-  
-  @mixin font ($weight, $size, $lineHeight) {
-    font-weight: $weight;
-    font-size: $size;
-    line-height: $lineHeight;
-  }
-  
-  @mixin square ($radius) {
-    @if $radius != 0 {
-      border-radius: $radius;
-    }
-  }
-  
-  @mixin transform($transform){
-    -webkit-transform: $transform;
-    -ms-transform: $transform;
-    -o-transform: $transform;
-    transform: $transform;
-  }
-  
-  @mixin userSelect($select) {
-    -webkit-touch-callout: $select;
-    -webkit-user-select: $select;
-    -khtml-user-select: $select;
-    -moz-user-select: $select;
-    -ms-user-select: $select;
-    user-select: $select;
-  }
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin userSelect($select) {
+  -webkit-touch-callout: $select;
+  -webkit-user-select: $select;
+  -khtml-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  user-select: $select;
+}
