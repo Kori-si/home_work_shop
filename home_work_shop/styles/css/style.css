@@ -95,6 +95,10 @@
   right: 0px;
 }
 
+.icon__menu__svg:hover path {
+  fill: #f16d7f;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header__logo {
     margin-left: 2rem;
@@ -151,20 +155,30 @@
   font-size: 24px;
 }
 
-.navigation__list {
+.navi__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navi__link {
   color: #6f6e6e;
-  font-size: 14px;
   font-weight: 300;
-}
-
-.navigation__link {
-  color: #6f6e6e;
-}
-
-.navigation__link:last-child {
-  color: #f16d7f;
   font-size: 14px;
+}
+
+.navigation__link:not(:last-child)::after {
+  content: "/";
+  padding: 0 8px;
+}
+
+.navigation__link:last-child .navi__link {
   font-weight: bold;
+  color: #f16d7f;
 }
 
 .top__content {
@@ -1387,6 +1401,242 @@
 
 .card__products {
   margin: 81px 0 129px;
+}
+
+.basket {
+  background: #ffffff;
+  padding: 96px 0 128px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 129px;
+}
+.basket__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 652px;
+}
+.basket__card__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+.basket__card .basket__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  gap: 32px;
+  padding-right: 60px;
+  max-height: 306px;
+  -webkit-box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+}
+.basket__card .basket__item__img__image {
+  height: 306px;
+  width: 262px;
+}
+.basket__card .basket__item__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 42px;
+  padding-top: 22px;
+}
+.basket__card .basket__item__text__title {
+  font-weight: 400;
+  font-size: 24px;
+  font-style: normal;
+  width: 200px;
+}
+.basket__card .basket__item__text__feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+.basket__card .basket__item__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 28px;
+  border: 0;
+  background: none;
+}
+.basket__card .basket__item__close__svg:hover path {
+  fill: #f16d7f;
+}
+.basket__card .feature__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.basket__card .feature__item__color {
+  color: #f16d7f;
+}
+.basket__card__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 72px 0 0;
+}
+.basket__card__button__item {
+  background: #ffffff;
+  border: 1px solid #C4C4C4;
+  padding: 17px 40px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #000;
+}
+.basket__card__button__item:hover {
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
+}
+.basket__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 360px;
+}
+.basket__form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  margin-bottom: 57px;
+  margin-top: 28px;
+}
+.basket__form__input .input__title {
+  font-size: 16px;
+  font-weight: 300;
+}
+.basket__form__input .input__name {
+  height: 45px;
+  padding-left: 17px;
+  border: 1px solid #C4C4C4;
+  font-size: 13px;
+  font-weight: 300;
+}
+.basket__form__input .input__button {
+  width: 101px;
+  font-size: 11px;
+  padding: 11px 0;
+  background: #ffffff;
+  border: 1px solid #C4C4C4;
+  font-weight: 300;
+}
+.basket__form__input .input__button:hover {
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+}
+.basket__form__sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 40px 34px;
+  background: #F5F3F3;
+}
+.basket__form__sum .basket__form__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #C4C4C4;
+  width: 275px;
+  gap: 12px;
+}
+.basket__form__sum .basket__form__price__min {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  font-size: 11px;
+  font-weight: 300;
+}
+.basket__form__sum .basket__form__price__max {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.basket__form__sum .basket__form__price__max__big {
+  font-size: 16px;
+  font-weight: 400;
+  color: #f16d7f;
+}
+.basket__form__sum__button {
+  padding-top: 17px;
+}
+.basket__form__sum__button .basket__button {
+  width: 275px;
+  background: #f16d7f;
+  color: #ffffff;
+  border: 1px solid #f16d7f;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+.basket__form__sum__button .basket__button:hover {
+  background: transparent;
+  color: #f16d7f;
 }
 
 * {

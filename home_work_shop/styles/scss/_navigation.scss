@@ -13,19 +13,23 @@
     font-size: 24px;
 }
 
-.navigation__list {
+.navi__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.navi__link{
     color: $color_grey;
-    font-size: 14px;
     font-weight: 300;
-}
-
-.navigation__link{
-    color: $color_grey;
-
-}
-
-.navigation__link:last-child{
-    color: $color_pink_basic;
     font-size: 14px;
+}
+
+.navigation__link:not(:last-child)::after {
+    content: "\/";
+    padding: 0 8px;
+}
+
+.navigation__link:last-child .navi__link{
     font-weight: bold;
+    color: $color_pink_basic;
 }

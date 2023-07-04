@@ -75,66 +75,9 @@
   }
 }
 
-// .menu_1 {
-//   background-color: $color_black;
-//   border: none;
-//   position: relative;
-//   display: inline-block;
-// }
-
-// .menu__big {
-//   display: none;
-//   position: absolute;
-//   z-index: 1;
-//   top: 50px;
-//   cursor: pointer;
-//   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-// }
-
-// .icon__menu__svg:hover path {
-//   fill: $color_pink_basic;
-//   transition: all 0.3s;
-// }
-
-// .menu_1:focus .menu__big,
-// .menu_1:hover .menu__big {
-//   display: flex;
-//   flex-direction: column;
-//   width: 232px;
-//   transition: all 0.3s;
-// }
-
-// .menu__big .menu__title {
-//   display: block;
-
-//   text-align: left;
-//   align-items: center;
-//   background-color: $color_back_white;
-//   color: $color_pink_basic;
-//   font-size: 14px;
-//   padding: 15px 120px 15px 32px;
-// }
-
-// .menu__big .menu__class {
-//   display: block;
-
-//   align-items: center;
-//   background-color: $color_back_white;
-//   color: $color_grey;
-//   font-size: 14px;
-//   padding: 10px 74px 10px 54px;
-//   text-align: left;
-// }
-
-// .menu__big a:hover {
-//   background-color: $color_white_hover;
-//   transition: all 0.3s;
-// }
-
-// .menu__big a:active {
-//   background-color: $color_pink_pale;
-//   transition: all 0.3s;
-// }
+.icon__menu__svg:hover path {
+  fill: $color_pink_basic;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header__logo {
