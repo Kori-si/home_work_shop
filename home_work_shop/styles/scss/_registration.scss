@@ -1,0 +1,112 @@
+@import "vars";
+@import "mixin";
+
+.registration {
+    display: flex;
+    gap: 128px;
+    padding: 64px 0 96px;
+
+    &__form {
+        display: flex;
+        min-width: 360px;
+        flex-direction: column;
+
+        .form__name {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 33px;
+
+            &__input {
+                padding-left: 17px;
+                height: 45px;
+                font-size: 14px;
+                font-weight: 300;
+                border: 1px solid $color_grey_bolder;
+
+                &::placeholder {
+                    color: $color_grey_bolder;
+                }
+            }
+
+            .form__gender {
+                @include font(300, 12px, 13.2px);
+                display: flex;
+                gap: 20px;
+                border-radius: 50%;
+
+                &__gap {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 11px;
+                }
+            }
+        }
+
+        .form__login {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &__password {
+                color: $color_grey_bolder;
+                @include font(300, 13px, 16px);
+            }
+        }
+
+        .reg__form__title {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .form__button {
+            @include font(400, 14px, 17px);
+            @include flex(row, center, center);
+            gap: 20px;
+            width: 167px;
+            height: 50px;
+            color: $color_back_white;
+            border: 1px solid $color_pink_basic;
+            background: $color_pink_basic;
+            margin-top: 39px;
+            transition: 0.3s;
+
+            &:hover {
+                background: transparent;
+                color: $color_pink_basic;
+                transition: 0.3s;
+
+                & path {
+                    fill: $color_pink_basic;
+                }
+            }
+        }
+    }
+
+    &__perk {
+        min-width: 360px;
+
+        .perk__title {
+            @include font(300, 24px, 29px);
+            padding-bottom: 22px;
+        }
+
+        .perk__text {
+            @include font(300, 24px, 29px);
+            padding-bottom: 21px;
+        }
+
+        .perk__ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-left: 30px;
+
+            .perk__link {
+                @include font(300, 24px, 29px);
+                list-style-image: url("../../img/Vector.svg");
+                padding-left: 22px;
+            }
+        }
+    }
+}
