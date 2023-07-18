@@ -1369,7 +1369,6 @@
   display: grid;
   grid-auto-rows: 1fr 100px 1fr;
   /* размер "неявных" строк, для демонстрации */
-  grid-auto-columns: 1fr;
   /* margin-bottom: 25px; */
   height: auto;
 }
@@ -1390,7 +1389,7 @@
           justify-content: center;
   background: #ffffff;
   border: 2px solid #ebebeb;
-  padding: 0 293px;
+  padding: 0 20%;
   z-index: 100;
   margin: 50px 0 0;
   grid-row: 2/4;
