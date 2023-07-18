@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixin";
 
 .navigation {
     background-color: $color_pink_back_navigation;
@@ -11,14 +12,16 @@
 .navigation__title {
     color: $color_pink_basic;
     font-size: 24px;
+    padding-left: 10px;
 }
 
 .navi__list {
     display: flex;
     flex-direction: row;
+    padding-right: 10px;
 }
 
-.navi__link{
+.navi__link {
     color: $color_grey;
     font-weight: 300;
     font-size: 14px;
@@ -29,7 +32,15 @@
     padding: 0 8px;
 }
 
-.navigation__link:last-child .navi__link{
+.navigation__link:last-child .navi__link {
     font-weight: bold;
     color: $color_pink_basic;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .navigation {
+        justify-content: center;
+        flex-direction: column;
+        gap: 32px;
+    }
 }

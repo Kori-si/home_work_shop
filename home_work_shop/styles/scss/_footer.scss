@@ -98,9 +98,9 @@
 }
 
 .footer__link {
-  @include flex(row, center, space-between);
+  @include flex(row, center, space-around);
   background-color: $color_black;
-  height: 79px;
+  min-height: 79px;
 }
 
 .footer__text {
@@ -140,11 +140,11 @@
   .footer__feedback {
     @include flex(column, center, center);
     gap: 50px;
-
   }
 
   .footer__link {
     display: flex;
+    padding: 0 16px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -176,5 +176,12 @@
   }
   .subscribe {
     width: 100%;
+  }
+
+  .footer__link {
+    @include flex(column-reverse, center, center);
+    background-color: $color_black;
+    gap: 33px;
+    padding: 51px 0 24px;
   }
 }

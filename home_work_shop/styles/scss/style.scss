@@ -9,13 +9,14 @@
 @import "thing";
 @import "card";
 @import "basket";
-@import "registration";
+@import "form";
 @import "vars";
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 body,

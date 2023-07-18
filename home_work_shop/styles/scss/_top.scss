@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixin";
 
 .top__content {
   display: flex;
@@ -15,7 +16,7 @@
 }
 
 .top__subject {
-  @include font(700, 48px, 58px); 
+  @include font(700, 48px, 58px);
   font-style: normal;
   color: $color_black;
 }
@@ -58,7 +59,7 @@
   .top__subject {
     font-size: 42px;
   }
-  
+
   .top__subtitle {
     font-size: 22px;
   }

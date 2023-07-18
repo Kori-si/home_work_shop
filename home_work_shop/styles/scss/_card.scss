@@ -2,31 +2,30 @@
 @import "mixin";
 
 .item {
-    display: block;
     display: grid;
-    grid-template-columns: 1fr;
-    display: grid;
-    grid-template-rows: 500px 100px 1fr;
+    grid-auto-rows: 1fr 100px 1fr;
+    /* размер "неявных" строк, для демонстрации */
+    grid-auto-columns: 1fr;
+    /* margin-bottom: 25px; */
+    height: auto;
 }
 
 .card {
     @include flex(column, center, center);
-    padding: 64px 0;
     background: #ffffff;
     border: 2px solid #ebebeb;
-    width: 1140px;
-    grid-row-start: span 2;
-    margin: 0 auto;
-    height: fit-content;
-    z-index: 10;
+    padding: 0 293px;
+
+    z-index: 100;
+    margin: 50px 0 0;
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
 
     &__product {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex(column, center, center);
         width: 641px;
         border-bottom: 2px solid $color_gret_bottom;
+        margin: 0 0 65px 0;
     }
 
     &__name__collection {
@@ -105,4 +104,39 @@
 
 .card__products {
     margin: 81px 0 129px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        padding: 64px 106px;
+        margin: 0;
+    }
+
+    .products__content {
+        gap: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .item {
+        max-width: 767px;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        padding: 64px 10px;
+        margin: 0;
+
+        &__product {
+            width: 100%;
+        }
+    }
 }

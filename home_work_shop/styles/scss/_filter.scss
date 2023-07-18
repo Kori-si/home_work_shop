@@ -39,7 +39,6 @@
         align-items: center;
         padding-left: 16px;
         gap: 11px;
-        
     }
 
     &__heading {
@@ -54,7 +53,6 @@
 
     &__item[open] .filter__title {
         color: $color_pink_basic;
-        
     }
 
     &__title {
@@ -108,8 +106,6 @@
         align-items: center;
         @include font(400, 14px, 16px);
         color: $color_grey;
-
-      
     }
 
     &__heading {
@@ -129,5 +125,49 @@
         top: 20px;
         z-index: 20;
     }
-
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .filter {
+      padding: 0;
+      width: auto;
+  
+          &__heading {
+          display: none;
+          }
+  
+          &__summary {
+          gap: 10px;
+  
+          & svg {
+              width: 30px;
+              height: 25px;
+          }
+          }
+  
+          &__sort {
+          gap: 10px;
+          justify-content: space-between;
+          align-items: center;
+          }
+      }
+  
+  
+    .sort {
+      padding: 0;
+      gap: 15px;
+      
+      &__heading {
+        font-size: 12px;
+      }
+  
+      &__details:last-child {
+        margin-right: 10px;
+      }
+  
+      &__summary {
+        align-items: baseline;
+        width: max-content;
+      }
+    }
+  }
